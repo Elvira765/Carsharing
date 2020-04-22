@@ -1,0 +1,44 @@
+.step__items {
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    padding: 8px 64px;
+    //position: absolute;
+    left: 0;
+    right: 0;
+    top: 96px;
+
+}
+
+.step__item {
+    display: flex;
+    align-items: center;
+
+
+    a.active {
+        text-decoration: none;
+        color: #0EC261;
+    }
+
+    &:last-child {
+        .step__pointer{
+            display: none;
+        }
+    }
+    
+}
+
+.step__pointer {
+    width: 6px;
+    height: 8px;
+    margin-right: 16px;
+}
+
+.step__name {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+    color: #999999;
+    text-decoration: none;
+}
