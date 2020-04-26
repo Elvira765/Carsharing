@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/carsharing/static/css/main.892d219d.chunk.css",
-    "main.js": "/carsharing/static/js/main.21990daa.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.21990daa.chunk.js.map",
+    "main.css": "/carsharing/static/css/main.7a2417ba.chunk.css",
+    "main.js": "/carsharing/static/js/main.f678d43d.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.f678d43d.chunk.js.map",
     "runtime-main.js": "/carsharing/static/js/runtime-main.1b4ec3d5.js",
     "runtime-main.js.map": "/carsharing/static/js/runtime-main.1b4ec3d5.js.map",
-    "static/js/2.c6e1195d.chunk.js": "/carsharing/static/js/2.c6e1195d.chunk.js",
-    "static/js/2.c6e1195d.chunk.js.map": "/carsharing/static/js/2.c6e1195d.chunk.js.map",
+    "static/js/2.b9fe3114.chunk.js": "/carsharing/static/js/2.b9fe3114.chunk.js",
+    "static/js/2.b9fe3114.chunk.js.map": "/carsharing/static/js/2.b9fe3114.chunk.js.map",
     "index.html": "/carsharing/index.html",
-    "precache-manifest.306816971ab56836b01dc0f5c2819ec6.js": "/carsharing/precache-manifest.306816971ab56836b01dc0f5c2819ec6.js",
+    "precache-manifest.dc32c4051b714e7c9ce5c974caf06180.js": "/carsharing/precache-manifest.dc32c4051b714e7c9ce5c974caf06180.js",
     "service-worker.js": "/carsharing/service-worker.js",
-    "static/css/main.892d219d.chunk.css.map": "/carsharing/static/css/main.892d219d.chunk.css.map",
-    "static/js/2.c6e1195d.chunk.js.LICENSE.txt": "/carsharing/static/js/2.c6e1195d.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/carsharing/static/media/Roboto-Regular.1cfd1aa3.woff"
+    "static/css/main.7a2417ba.chunk.css.map": "/carsharing/static/css/main.7a2417ba.chunk.css.map",
+    "static/js/2.b9fe3114.chunk.js.LICENSE.txt": "/carsharing/static/js/2.b9fe3114.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/carsharing/static/media/Roboto-Regular.1cfd1aa3.woff",
+    "static/media/Additional.scss": "/carsharing/static/media/checkbox.ee33b0c5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b4ec3d5.js",
-    "static/js/2.c6e1195d.chunk.js",
-    "static/css/main.892d219d.chunk.css",
-    "static/js/main.21990daa.chunk.js"
+    "static/js/2.b9fe3114.chunk.js",
+    "static/css/main.7a2417ba.chunk.css",
+    "static/js/main.f678d43d.chunk.js"
   ]
 }
