@@ -7,7 +7,7 @@
         position: relative;
         top: 0;
         left: 0;
-        padding: 32px 8px 17px;
+        padding: 32px 32px 17px;
         background: #151B1F;
         display: flex;
         align-items: flex-end;
@@ -18,11 +18,15 @@
     display: none;
     @media (min-width: 768px) {
         display: block;
-        width: 48px;
-        height: 48px;
         border-radius: 50%;
         background: #151B1F;
         border: none;
+        left: 8px;
+        z-index: 30;
+        width: 48px;
+        height: 48px;
+        position: fixed;
+        bottom: 16px;
 
         &:hover{
             border: 1px solid #EEEEEE;

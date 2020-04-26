@@ -1,0 +1,133 @@
+.additional {
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional__date {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+    text-align: end;
+
+    input {
+        border: 0;
+    }
+
+    .additional__date-start {
+        border-bottom: 1px solid #999999;
+        width: 224px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 5px;
+    }
+
+    .additional__date-finish {
+        border-bottom: 1px solid #999999;
+        width: 224px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 5px;
+    }
+}
+
+.additional__tariff {
+    display: flex;
+    flex-direction: column;
+}
+
+.additional__title {
+    margin-bottom: 16px;
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #121212;
+}
+
+.additional__service {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+
+.radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+}
+.radio + label {
+    position: relative;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+}
+.radio + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #999999;
+}
+.radio + label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #0EC261;
+    opacity: 0;
+    transition: .2s;
+}
+.radio:checked + label:after {
+    opacity: 1;
+}
+
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.checkbox + label {
+    position: relative;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+}
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #0EC261;
+    background: #ffffff;
+    transition: .2s;
+}
+.checkbox + label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 10px;
+    transition: .2s;
+    background: url(./../../../../../Assets/image/order/checkbox.svg) no-repeat;
+    display: none;
+}
+
+.checkbox:checked + label:after {
+    display: block;
+}

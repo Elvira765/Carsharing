@@ -1,5 +1,7 @@
 import React from 'react';
-import Car from './../Car/Car'
+import Car from './../Car/Car';
+import './Location.scss';
+import StepOutput from '../../StepOutput/StepOutput';
 
 class Location extends React.Component {
 
@@ -14,19 +16,28 @@ class Location extends React.Component {
 
   render() {
     const Location = (
-        <div className="step__location">
-            <form class="step__location-form">
+        <div className="location">
+            <div className="location__input">
+            <form className="location__form">
                 <label>Город
-                        <input class="step__location-city" type="search" placeholder="Начните воодить город..." name="city" />
+                        <input className="location__city" type="search" placeholder="Начните воодить город..." name="city" />
                 </label>
                 <label>Пункт выдачи
-                    <input class="step__location-point" type="search" placeholder="Начните вводить пункт ..." name="point" />
+                    <input className="location__point" type="search" placeholder="Начните вводить пункт ..." name="point" />
                 </label>
             </form>
-            <button onClick={this.loadStuff}>Начать</button>
+            <div className="location-map">
+                <p className="location__map-text">Вsssыбрать на карте:</p>
+                    <img src="./image/order/map.png" alt="map " className="location__map-image"/>
+            </div>
+            </div>
+            <div className="location__output">
+                <StepOutput />
+                <button onClick={this.loadStuff}>Выбрать модель</button>
+            </div>
         </div>
     );
-    return (<div>{ this.state.loadWorksheep ? <Car/> : Location }</div>);
+    return (<div className="step__location">{ this.state.loadWorksheep ? <Car/> : Location }</div>);
   }
 }
 

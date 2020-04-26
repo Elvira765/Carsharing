@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Step.scss';
 import { NavLink} from 'react-router-dom';
-import StepContent from './StepContent/StepContent'
+import Location from './StepContent/Location/Location'
 
 const Step = (props) => {
     return (
@@ -13,7 +13,7 @@ const Step = (props) => {
                 <StepItem name="Итого" id="4" />
             </div>
             <div className="step__content">
-                <StepContent />
+                <Location />
             </div>
         </div >
     )

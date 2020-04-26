@@ -1,0 +1,86 @@
+.output {
+    min-width: 24px;
+}
+
+.output__title {
+    font-size: 18px;
+	line-height: 21px;
+	text-align: end;
+	font-weight: 600;
+}
+
+.output__items {
+    margin-top: 40px;
+}
+
+.output__item {
+    font-size: 14px;
+    line-height: 16px;
+    color: #121212;
+}
+
+.output__location {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.output__model {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.output__time {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.output__tariff {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.output__tank {
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li { clear: both; }
+
+	ul li span:first-child {
+		float: left;
+		padding: 0.4em 0 0;
+		margin: 0;
+	}
+	ul li span + span {
+		float: right;
+		padding: 0 0 0.4em;
+		margin: 0;
+	}
+
+	ul li:after {
+		content: "";
+		display: block;
+		overflow: hidden;
+		height: 1em;
+		border-bottom: 1px dotted;
+    }
+    
+    .output__price-wrp {
+		clear: both;
+		display: flex;
+		margin-top: 32px;
+	}
+
+	.output__price-text {
+		font-weight: 600;
+		margin-right: 8px;
+	}
