@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import './Step.scss';
-import { NavLink} from 'react-router-dom';
-import Location from './StepContent/Location/Location'
+import { NavLink, Route} from 'react-router-dom';
+import Location from './StepContent/Location/Location';
+import Car from './StepContent/Car/Car';
+import Additional from './StepContent/Additional/Additional';
+import Conclusion from './StepContent/Conclusion/Conclusion';
 
 const Step = (props) => {
     return (
         <div className="step">
             <div className="step__items">
-                <StepItem name="Местоположение" id="1"/>
-                <StepItem name="Модель" id="2" />
-                <StepItem name="Допольнительно" id="3" />
-                <StepItem name="Итого" id="4" />
+                <NavLink exact to="/order/1"><StepItem name="Местоположение" id="1"/></NavLink>
+                <NavLink exact to="/order/2"><StepItem name="Модель" id="2" /></NavLink>
+                <NavLink exact to="/order/3"><StepItem name="Допольнительно" id="3" /></NavLink>
+                <NavLink exact to="/order/4"><StepItem name="Итого" id="4" /></NavLink>
             </div>
             <div className="step__content">
-                <Location />
+                <Route path='/order/1' render ={ () => <Location /> }/>
+                <Route path='/order/2' render ={ () => <Car /> }/>
+                <Route path='/order/3' render ={ () => <Additional /> }/>
+                <Route path='/order/4' render ={ () => <Conclusion /> }/>
             </div>
         </div >
     )

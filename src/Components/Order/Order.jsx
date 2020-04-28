@@ -2,11 +2,14 @@ import React from 'react';
 import './Order.scss';
 import Header from '../Header/Header';
 import Step from './Step/Step';
+import { NavLink } from 'react-router-dom';
 
 const Order = () => {
     return (
         <div className="order">
-            <Header />
+            <NavLink to ="/">
+                <Header />
+            </NavLink>
             <Step />
         </div>
     )

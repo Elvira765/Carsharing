@@ -2,6 +2,7 @@ import React from 'react';
 import Additional from './../Additional/Additional';
 import StepOutput from '../../StepOutput/StepOutput';
 import './Car.scss'
+import { NavLink } from 'react-router-dom';
 
 class Car extends React.Component {
 
@@ -51,7 +52,9 @@ class Car extends React.Component {
               </div>
               <div className="car__output">
                 <StepOutput />
-                <button onClick={this.loadStuff}>Дополнительно</button>
+                <NavLink exact to="/order/3">
+                  <button onClick={this.loadStuff}>Дополнительно</button>
+                </NavLink>
               </div>
         </div>
     );

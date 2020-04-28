@@ -1,7 +1,8 @@
 import React from 'react';
 import './Additional.scss';
 import StepOutput from '../../StepOutput/StepOutput';
-import Conclusion from './../Conclusion/Conclusion'
+import Conclusion from './../Conclusion/Conclusion';
+import { NavLink } from 'react-router-dom';
 
 class Additional extends React.Component {
 
@@ -57,7 +58,9 @@ class Additional extends React.Component {
                 </div>
                 <div className="car__output">
                   <StepOutput />
-                  <button onClick={this.loadStuff}>Итого</button>
+                  <NavLink exact to="/order/4">
+                    <button onClick={this.loadStuff}>Итого</button>
+                  </NavLink>
                 </div>
         </div>
     );

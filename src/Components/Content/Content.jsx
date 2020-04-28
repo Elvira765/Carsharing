@@ -10,7 +10,7 @@ const Content = () => {
                     <div className="content__title">Каршеринг</div>
                     <div className="content__subtitle">Need for drive</div>
                     <div className="content__text">Поминутная аренда авто твоего города</div>
-                        <NavLink exact to="/order">
+                        <NavLink to="/order/1">
                             <button className="content__btn">
                                 <span className="content__btn-text">Забронировать</span>
                             </button>

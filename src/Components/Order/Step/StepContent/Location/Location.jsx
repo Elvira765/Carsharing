@@ -2,6 +2,7 @@ import React from 'react';
 import Car from './../Car/Car';
 import './Location.scss';
 import StepOutput from '../../StepOutput/StepOutput';
+import { NavLink } from 'react-router-dom';
 
 class Location extends React.Component {
 
@@ -27,13 +28,15 @@ class Location extends React.Component {
                 </label>
             </form>
             <div className="location-map">
-                <p className="location__map-text">Вsssыбрать на карте:</p>
+                <p className="location__map-text">Выбрать на карте:</p>
                     <img src="./image/order/map.png" alt="map " className="location__map-image"/>
             </div>
             </div>
             <div className="location__output">
                 <StepOutput />
-                <button onClick={this.loadStuff}>Выбрать модель</button>
+                <NavLink exact to="/order/2">
+                    <button onClick={this.loadStuff}>Выбрать модель</button>
+                </NavLink>
             </div>
         </div>
     );
