@@ -1,7 +1,0 @@
-let store = {
-    state: {
-        OrderPage: {
-            
-        }
-    }
-}

@@ -4,13 +4,14 @@ import Header from '../Header/Header';
 import Step from './Step/Step';
 import { NavLink } from 'react-router-dom';
 
-const Order = () => {
+const Order = (props) => {
+
     return (
         <div className="order">
             <NavLink to ="/">
                 <Header />
             </NavLink>
-            <Step />
+            <Step StepOutputData={props.StepOutputData} />
         </div>
     )
 }

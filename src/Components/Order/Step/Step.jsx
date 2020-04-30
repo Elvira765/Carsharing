@@ -16,7 +16,7 @@ const Step = (props) => {
                 <NavLink exact to="/order/4"><StepItem name="Итого" id="4" /></NavLink>
             </div>
             <div className="step__content">
-                <Route path='/order/1' render ={ () => <Location /> }/>
+                <Route path='/order/1' render ={ () => <Location StepOutputData={props.StepOutputData} /> }/>
                 <Route path='/order/2' render ={ () => <Car /> }/>
                 <Route path='/order/3' render ={ () => <Additional /> }/>
                 <Route path='/order/4' render ={ () => <Conclusion /> }/>

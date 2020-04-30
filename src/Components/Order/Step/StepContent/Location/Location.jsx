@@ -4,6 +4,13 @@ import './Location.scss';
 import StepOutput from '../../StepOutput/StepOutput';
 import { NavLink } from 'react-router-dom';
 
+/*let newLineOutput = React.createRef();
+
+let addLocation = (props) => {
+    let text = newLineOutput.current.value;
+    props.addLocation(text);
+}*/
+
 class Location extends React.Component {
 
     constructor(props) {
@@ -15,13 +22,12 @@ class Location extends React.Component {
         this.setState({loadWorksheep: true});
     }
 
-  render() {
-    const Location = (
+    Location = (props) => (
         <div className="location">
             <div className="location__input">
             <form className="location__form">
                 <label>Город
-                        <input className="location__city" type="search" placeholder="Начните воодить город..." name="city" />
+                        <input className="location__city" type="search" placeholder="Начните воодить город..." name="city" /*onChange={addLocation} ref={newLineOutput}*/ />
                 </label>
                 <label>Пункт выдачи
                     <input className="location__point" type="search" placeholder="Начните вводить пункт ..." name="point" />
@@ -33,14 +39,17 @@ class Location extends React.Component {
             </div>
             </div>
             <div className="location__output">
-                <StepOutput />
+                <StepOutput StepOutputData={props.StepOutputData} />
                 <NavLink exact to="/order/2">
                     <button onClick={this.loadStuff}>Выбрать модель</button>
                 </NavLink>
             </div>
         </div>
     );
-    return (<div className="step__location">{ this.state.loadWorksheep ? <Car/> : Location }</div>);
+    render() {
+        return (
+            <div className="step__location">{ this.state.loadWorksheep ? <Car/> : Location }</div>
+    );
   }
 }
 

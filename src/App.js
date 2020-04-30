@@ -5,12 +5,12 @@ import MainPage from './Pages/MainPage.js';
 import OrderPage from './Pages/OrderPage.js'
 
 
-const App = () => {
+const App = (props) => {
   return(
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <Route exact path="/" component={MainPage} />
-        <Route path="/order" component={OrderPage}/>
+        <Route exact path="/" render={ () => <MainPage />} />
+        <Route path="/order" render={ () => <OrderPage StepOutputData={props.StepOutputData}/> } />
      </div>
      </Router>
   )
