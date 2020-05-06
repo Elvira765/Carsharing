@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a536721ca55d9a938e0c886ba9d0b3d8",
+    "revision": "6d6eb884d9539b9080e9e5988fafde26",
     "url": "/carsharing/index.html"
   },
   {
-    "revision": "79fb0b5732540dc8f799",
-    "url": "/carsharing/static/css/main.dd843fdc.chunk.css"
+    "revision": "8ece7a356d005292fdbe",
+    "url": "/carsharing/static/css/main.cfbd2167.chunk.css"
   },
   {
-    "revision": "54728bc75c6fb176400e",
-    "url": "/carsharing/static/js/2.240e0e6d.chunk.js"
+    "revision": "56f82cf29160547ec7c4",
+    "url": "/carsharing/static/js/2.d5d11cd3.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/carsharing/static/js/2.240e0e6d.chunk.js.LICENSE.txt"
+    "url": "/carsharing/static/js/2.d5d11cd3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79fb0b5732540dc8f799",
-    "url": "/carsharing/static/js/main.131f964d.chunk.js"
+    "revision": "8ece7a356d005292fdbe",
+    "url": "/carsharing/static/js/main.eb1a5b57.chunk.js"
   },
   {
     "revision": "f099bb510d99ac4ae02e",
@@ -50,5 +50,25 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee33b0c5076045447e39a272c446f10b",
     "url": "/carsharing/static/media/checkbox.ee33b0c5.svg"
+  },
+  {
+    "revision": "9c23a58302e982ac52c55141a95ac697",
+    "url": "/carsharing/static/media/image 1.9c23a583.png"
+  },
+  {
+    "revision": "4125631c0a07a378e591ae276a618867",
+    "url": "/carsharing/static/media/image 2.4125631c.png"
+  },
+  {
+    "revision": "d2b9c74d10337537a5053dc49afbf2d7",
+    "url": "/carsharing/static/media/image 3.d2b9c74d.png"
+  },
+  {
+    "revision": "492b5a6ca78e060e28ee67d2ee388ca2",
+    "url": "/carsharing/static/media/image 4.492b5a6c.png"
+  },
+  {
+    "revision": "f803461a62584871d7e4847c47f9bd4c",
+    "url": "/carsharing/static/media/map.f803461a.png"
   }
 ]);

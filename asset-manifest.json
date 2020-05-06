@@ -1,24 +1,29 @@
 {
   "files": {
-    "main.css": "/carsharing/static/css/main.dd843fdc.chunk.css",
-    "main.js": "/carsharing/static/js/main.131f964d.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.131f964d.chunk.js.map",
+    "main.css": "/carsharing/static/css/main.cfbd2167.chunk.css",
+    "main.js": "/carsharing/static/js/main.eb1a5b57.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.eb1a5b57.chunk.js.map",
     "runtime-main.js": "/carsharing/static/js/runtime-main.1b4ec3d5.js",
     "runtime-main.js.map": "/carsharing/static/js/runtime-main.1b4ec3d5.js.map",
-    "static/js/2.240e0e6d.chunk.js": "/carsharing/static/js/2.240e0e6d.chunk.js",
-    "static/js/2.240e0e6d.chunk.js.map": "/carsharing/static/js/2.240e0e6d.chunk.js.map",
+    "static/js/2.d5d11cd3.chunk.js": "/carsharing/static/js/2.d5d11cd3.chunk.js",
+    "static/js/2.d5d11cd3.chunk.js.map": "/carsharing/static/js/2.d5d11cd3.chunk.js.map",
     "index.html": "/carsharing/index.html",
-    "precache-manifest.541e41fcdb254d016ecd1142ece00221.js": "/carsharing/precache-manifest.541e41fcdb254d016ecd1142ece00221.js",
+    "precache-manifest.0e7861f5eaea582e41b7d4cbc6f9db3e.js": "/carsharing/precache-manifest.0e7861f5eaea582e41b7d4cbc6f9db3e.js",
     "service-worker.js": "/carsharing/service-worker.js",
-    "static/css/main.dd843fdc.chunk.css.map": "/carsharing/static/css/main.dd843fdc.chunk.css.map",
-    "static/js/2.240e0e6d.chunk.js.LICENSE.txt": "/carsharing/static/js/2.240e0e6d.chunk.js.LICENSE.txt",
+    "static/css/main.cfbd2167.chunk.css.map": "/carsharing/static/css/main.cfbd2167.chunk.css.map",
+    "static/js/2.d5d11cd3.chunk.js.LICENSE.txt": "/carsharing/static/js/2.d5d11cd3.chunk.js.LICENSE.txt",
     "static/media/index.css": "/carsharing/static/media/Roboto-Regular.1cfd1aa3.woff",
-    "static/media/Additional.scss": "/carsharing/static/media/checkbox.ee33b0c5.svg"
+    "static/media/Additional.scss": "/carsharing/static/media/checkbox.ee33b0c5.svg",
+    "static/media/image 1.png": "/carsharing/static/media/image 1.9c23a583.png",
+    "static/media/image 2.png": "/carsharing/static/media/image 2.4125631c.png",
+    "static/media/image 3.png": "/carsharing/static/media/image 3.d2b9c74d.png",
+    "static/media/image 4.png": "/carsharing/static/media/image 4.492b5a6c.png",
+    "static/media/map.png": "/carsharing/static/media/map.f803461a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1b4ec3d5.js",
-    "static/js/2.240e0e6d.chunk.js",
-    "static/css/main.dd843fdc.chunk.css",
-    "static/js/main.131f964d.chunk.js"
+    "static/js/2.d5d11cd3.chunk.js",
+    "static/css/main.cfbd2167.chunk.css",
+    "static/js/main.eb1a5b57.chunk.js"
   ]
 }
