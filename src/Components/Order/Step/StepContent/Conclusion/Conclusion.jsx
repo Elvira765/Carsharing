@@ -1,12 +1,14 @@
 import React from 'react';
 import './Conclusion.scss';
 import StepOutput from '../../StepOutput/StepOutput';
+import car2 from '../../../../../Assets/image/order/image 2.png';
 
 class Conclusion extends React.Component {
 
     constructor(props) {
         super();
         this.state = {loadWorksheep: false};
+        this.props = props;
     }
 
     loadStuff = () => {
@@ -25,11 +27,11 @@ class Conclusion extends React.Component {
                     <div className="conclusion__order-date"><b>Доступна с</b> 12.06.2019 12:00</div>
                 </div>
                 <div className="conclusion__order-image">
-                    <img src="./image/order/image 2.png" alt="car"/>
+                    <img src={car2} alt="car"/>
                 </div>
                   </div>
                 <div className="conclusion__output">
-                  <StepOutput />
+                  <StepOutput StepOutputData={this.props.StepOutputData} />
                   <button onClick={this.loadStuff}>Итого</button>
                 </div>
         </div>

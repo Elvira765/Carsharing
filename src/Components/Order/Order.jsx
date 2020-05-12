@@ -5,13 +5,12 @@ import Step from './Step/Step';
 import { NavLink } from 'react-router-dom';
 
 const Order = (props) => {
-
     return (
         <div className="order">
             <NavLink to ="/">
                 <Header />
             </NavLink>
-            <Step StepOutputData={props.StepOutputData} />
+            <Step store={props.store} state={props.state}/>
         </div>
     )
 }

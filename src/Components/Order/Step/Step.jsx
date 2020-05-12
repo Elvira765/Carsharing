@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import './Step.scss';
 import { NavLink, Route} from 'react-router-dom';
-import Location from './StepContent/Location/Location';
 import Car from './StepContent/Car/Car';
 import Additional from './StepContent/Additional/Additional';
 import Conclusion from './StepContent/Conclusion/Conclusion';
+import LocationContainer from './StepContent/Location/LocationContainer';
 
 const Step = (props) => {
+    let state = props.OrderPage;
     return (
         <div className="step">
             <div className="step__items">
-                <NavLink exact to="/order/1"><StepItem name="Местоположение" id="1"/></NavLink>
-                <NavLink exact to="/order/2"><StepItem name="Модель" id="2" /></NavLink>
-                <NavLink exact to="/order/3"><StepItem name="Допольнительно" id="3" /></NavLink>
-                <NavLink exact to="/order/4"><StepItem name="Итого" id="4" /></NavLink>
+                <NavLink exact to="/order/1"><StepItem name={state.StepItem[0].name} id={state.StepItem[0].id} /></NavLink>
+                <NavLink exact to="/order/2"><StepItem name={props.store.StepItem[1].name} id={props.OrderPage.StepItem[1].id} /></NavLink>
+                <NavLink exact to="/order/3"><StepItem name={props.store.StepItem[2].name} id={props.OrderPage.StepItem[2].id} /></NavLink>
+                <NavLink exact to="/order/4"><StepItem name={props.store.StepItem[3].name} id={props.OrderPage.StepItem[3].id} /></NavLink>
             </div>
             <div className="step__content">
-                <Route path='/order/1' render ={ () => <Location StepOutputData={props.StepOutputData} /> }/>
-                <Route path='/order/2' render ={ () => <Car /> }/>
-                <Route path='/order/3' render ={ () => <Additional /> }/>
-                <Route path='/order/4' render ={ () => <Conclusion /> }/>
+                <Route path='/order/1' render ={ () => <LocationContainer store={props.store}  /> }/>
+                <Route path='/order/2' render ={ () => <Car StepOutputData={props.OrderPage.StepOutputData} /> }/>
+                <Route path='/order/3' render ={ () => <Additional StepOutputData={props.OrderPage.StepOutputData} /> }/>
+                <Route path='/order/4' render ={ () => <Conclusion StepOutputData={props.OrderPage.StepOutputData} /> }/>
             </div>
         </div >
     )
@@ -39,5 +40,6 @@ const StepItem = (props) => {
         </div>
     )
 }
+
 
 export default Step;

@@ -9,6 +9,7 @@ class Additional extends React.Component {
     constructor(props) {
         super();
         this.state = {loadWorksheep: false};
+        this.props = props;
     }
 
     loadStuff = () => {
@@ -57,7 +58,7 @@ class Additional extends React.Component {
                   </form>
                 </div>
                 <div className="car__output">
-                  <StepOutput />
+                  <StepOutput StepOutputData={this.props.StepOutputData}/>
                   <NavLink exact to="/order/4">
                     <button onClick={this.loadStuff}>Итого</button>
                   </NavLink>

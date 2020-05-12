@@ -3,8 +3,8 @@ import './StepOutput.scss';
 import StepOutputItem from './StepOutputItem/StepOutputItem'
 
 const StepOutput = (props) => {
-
-    let OutputElements = props.StepOutputData.map(el => <StepOutputItem name={el.name} item={el.item}/> );
+    let OutputElements = 
+        props.StepOutputData.map( s=> <StepOutputItem name={s.name} item={s.item}/> );
 
     return (
         <div className="output">

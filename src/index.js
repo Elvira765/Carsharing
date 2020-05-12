@@ -1,19 +1,24 @@
+import './index.css';
+import * as serviceWorker from './serviceWorker';
+import store from './Redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { addLocation } from './Redux/order-reducer';
+import App from './App'; 
+import { BrowserRouter as Router } from "react-router-dom";
 
-let StepOutputData = [
-  {id: 1,name: 'Пункт выдачи', item:'Ульяновск, Нариманова 42'},
-  {id: 2,name:'Модель', item:'Hyndai, i30 N'},
-  {id: 3,name:'Длительность аренды', item:'1д 2ч'},
-  {id: 4,name:'Тариф', item:'На сутки'},
-  {id: 5,name:'Полный бак', item:'Да'}
-]
+let renderEntireTree = (state) => {
+  ReactDOM.render(
+    <Router basename={process.env.PUBLIC_URL}>
+      <App state={state} dispatch={store.dispatch.bind(store)} store={store}/>
+    </Router>,document.getElementById('root'));
+}
 
-ReactDOM.render(<App StepOutputData={StepOutputData}/>,document.getElementById('root'));
+renderEntireTree(store.getState());
+
+store.subscribe (() => {
+  let state = store.getState();
+  renderEntireTree(state);
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

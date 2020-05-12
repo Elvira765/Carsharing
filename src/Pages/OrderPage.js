@@ -6,7 +6,7 @@ const OrderPage = (props) =>  {
     return (
       <div className="OrderPage">
         <Menu />
-        <Order StepOutputData={props.StepOutputData}/>
+        <Order store={props.store} state={props.state}/>
       </div>
     );
   }
