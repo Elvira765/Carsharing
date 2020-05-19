@@ -3,15 +3,15 @@ import './StepOutput.scss';
 import StepOutputItem from './StepOutputItem/StepOutputItem'
 
 const StepOutput = (props) => {
-    let OutputElements = 
-        props.StepOutputData.map( s=> <StepOutputItem name={s.name} item={s.item}/> );
+    //let OutputElements = 
+        //props.StepOutputData.map( s=> <StepOutputItem name={s.name} item={s.item}/> );
 
     return (
         <div className="output">
             <div className="output__title">Ваш заказ:</div>
             <ul>
                 <div class="output__items">
-                    { OutputElements }
+                    {/* { OutputElements } */}
                 </div>
             </ul>
             <div className="output__price-wrp">

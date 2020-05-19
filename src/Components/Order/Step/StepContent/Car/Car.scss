@@ -19,10 +19,15 @@
     margin-top: 48px;
 }
 .car__item {
-    min-width: 368px;
+    max-width: 368px;
     min-height: 224px;
     border: 1px solid #EEEEEE;
     padding: 16px;
+}
+
+.car__item-image {
+    width: 100%;
+    height: auto;
 }
 
 .radio {

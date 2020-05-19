@@ -1,23 +1,28 @@
 import React from 'react';
 import { addLocationActionCreator, updateNewLocationText } from '../../../../../Redux/order-reducer';
 import Location from './Location';
+import { connect } from 'react-redux';
 
 
-const LocationContainer  = (props)=> {
-    let state = props.store.getState();
-
-    let addLocation = () => {
-        props.store.dispatch(addLocationActionCreator());
+const mapStateToProps = (state) => {
+    return {
+        orderPage: state.orderPage,
+        newLocationText: state.orderPage.StepOutputData
     }
-
-    let onLocationChange = (text) => {
-        let action =  updateNewLocationText(text);
-        props.store.dispatch(action);
-    }
-    
-
-    return (<Location updateNewLocationText={onLocationChange} addLocation={addLocation} 
-                        OrderPage={state.OrderPage} newLocationText={ state.OrderPage.StepOutputData}/>)
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        updateNewLocationText: (text) => {
+            let action =  updateNewLocationText(text);
+            dispatch(action);
+        },
+        addLocation :() => {
+            dispatch(addLocationActionCreator());
+        }
+    }
+}
+
+const LocationContainer = connect (mapStateToProps, mapDispatchToProps)(Location)
 
 export default LocationContainer;

@@ -22,12 +22,6 @@ a {
     display: flex;
     align-items: center;
 
-
-    a.active {
-        text-decoration: none;
-        color: #0EC261;
-    }
-
     &:last-child {
         .step__pointer{
             display: none;
@@ -49,6 +43,12 @@ a {
     margin-right: 16px;
     color: #999999;
     text-decoration: none;
+}
+
+a.active {
+    .step__name {
+        color: #0EC261;
+    }
 }
 
 .step__content {

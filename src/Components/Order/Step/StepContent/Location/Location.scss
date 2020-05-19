@@ -13,7 +13,7 @@
         margin-right: 16px;
     }
 
-    input {
+    select {
         border: 0;
     }
 }
@@ -29,7 +29,7 @@
 	width: 342px;
 }
 
-input.location__city {
+select.location__city {
 	border-bottom: 1px solid #999999;
 	width: 224px;
 	font-size: 14px;
@@ -37,7 +37,7 @@ input.location__city {
 	margin-left: 5px;
 }
 
-input.location__point {
+select.location__point {
 	border-bottom: 1px solid #999999;
 	width: 224px;
 	font-size: 14px;

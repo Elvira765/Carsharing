@@ -4,20 +4,24 @@ import { NavLink, Route} from 'react-router-dom';
 import Car from './StepContent/Car/Car';
 import Additional from './StepContent/Additional/Additional';
 import Conclusion from './StepContent/Conclusion/Conclusion';
-import LocationContainer from './StepContent/Location/LocationContainer';
+import Location from './StepContent/Location/Location';
+import { connect } from 'react-redux';
+import { setMenuActionCreator } from '../../../Redux/order-reducer'
 
 const Step = (props) => {
-    let state = props.OrderPage;
     return (
         <div className="step">
             <div className="step__items">
-                <NavLink exact to="/order/1"><StepItem name={state.StepItem[0].name} id={state.StepItem[0].id} /></NavLink>
-                <NavLink exact to="/order/2"><StepItem name={props.store.StepItem[1].name} id={props.OrderPage.StepItem[1].id} /></NavLink>
-                <NavLink exact to="/order/3"><StepItem name={props.store.StepItem[2].name} id={props.OrderPage.StepItem[2].id} /></NavLink>
-                <NavLink exact to="/order/4"><StepItem name={props.store.StepItem[3].name} id={props.OrderPage.StepItem[3].id} /></NavLink>
+                {
+                    props.menu.map(el => {
+                        return(
+                            <NavLink key={el.id} onClick={() => props.setMenuActionCreator(el.id) } /*className = { el.active ? "step__items--active" : "step__items" }*/ exact to={el.path}><StepItem name={el.name} /></NavLink>
+                        )
+                    })
+                }
             </div>
-            <div className="step__content">
-                <Route path='/order/1' render ={ () => <LocationContainer store={props.store}  /> }/>
+            <div className={ props.isMenu ? "step__content" : "step__content--active" }>
+                <Route path='/order/1' render ={ () => <Location /> }/>
                 <Route path='/order/2' render ={ () => <Car StepOutputData={props.OrderPage.StepOutputData} /> }/>
                 <Route path='/order/3' render ={ () => <Additional StepOutputData={props.OrderPage.StepOutputData} /> }/>
                 <Route path='/order/4' render ={ () => <Conclusion StepOutputData={props.OrderPage.StepOutputData} /> }/>
@@ -27,13 +31,9 @@ const Step = (props) => {
 }
 
 const StepItem = (props) => {
-
-    let path = "/order/" + props.id;
-    
-
     return (
-        <div class="step__item">
-            <NavLink to={path} className="step__name">{props.name}</NavLink>
+        <div className="step__item">
+            <span className="step__name">{props.name} </span>
             <svg className="step__pointer" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L6 4.03L0 8V0Z" fill="#999999" />
             </svg>
@@ -41,5 +41,12 @@ const StepItem = (props) => {
     )
 }
 
+const mapStateToProps = (state) => ({
+    menu: state.orderPage.menu,
+    OrderPage: state.orderPage,
+    isMenu: state.orderPage.isMenu
+})
 
-export default Step;
+
+
+export default connect(mapStateToProps, { setMenuActionCreator })(Step)

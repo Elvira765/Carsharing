@@ -10,7 +10,7 @@ const Order = (props) => {
             <NavLink to ="/">
                 <Header />
             </NavLink>
-            <Step store={props.store} state={props.state}/>
+            <Step />
         </div>
     )
 }
